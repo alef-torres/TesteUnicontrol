@@ -1,0 +1,18 @@
+<%@ page languege="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Pessoas</title>
+<link rel="stylesheet" href="estilo/pesquisa.css">
+</head>
+<body>
+	<h1>Lista de pessoas</h1>
+	<a href="index.html"><button>Novo cadastro</button></a>
+
+
+</body>
+</html>

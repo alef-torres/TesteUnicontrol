@@ -1,0 +1,15 @@
+/**
+ * 
+ */
+
+function validar() {
+	let nome = frmPessoa.nome.valeu
+	let prof = frmPessoa.profissao.valeu
+	let idade = frmPessoa.idade.value
+	
+	if (nome === ""){
+		alert("Preencha o campo nome")
+		frmPessoa.nome.focus()
+		return false
+	}
+}

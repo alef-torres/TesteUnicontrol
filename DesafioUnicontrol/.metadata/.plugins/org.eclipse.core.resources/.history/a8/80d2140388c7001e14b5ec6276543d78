@@ -1,0 +1,42 @@
+package model;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class DAO {
+	/** módulo de conexão **/
+
+	private String driver = "com.mysql.jdbc.Driver";
+	private String url = "jdbc:mysql://localhost:3306/dbpessoas";
+	private String user = "root";
+	private String password = "";
+
+	private Connection conectar() {
+		Connection con = null;
+
+		try {
+			Class.forName(driver);
+			con = DriverManager.getConnection(url, user, password);
+			return con;
+		} catch (Exception e) {
+			System.out.println(e);
+			return null;
+		}
+	}
+
+	// teste de conexão
+
+	public void testeConexao() {
+		try {
+			Connection con = conectar();
+			if (con != null) {
+				System.out.println("Conexão estabelecida com sucesso!");
+				con.close();
+			} else {
+				System.out.println("Falha ao estabelecer conexão!");
+			}
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
+}

@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\Users\alef_\OneDrive\Área de Trabalho\Codes\DesafioUnicontrol\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2713206288.index
+140880497.index
+2512658736.index
+1182871807.index
+844692890.index
+109316766.index
+1310226311.index

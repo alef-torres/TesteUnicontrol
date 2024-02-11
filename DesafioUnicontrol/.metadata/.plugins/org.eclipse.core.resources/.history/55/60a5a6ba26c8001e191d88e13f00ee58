@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+
+function validar() {
+	let nome = frmPessoa.nome.valeu
+	let prof = frmPessoa.profissao.valeu
+	let idade = frmPessoa.idade.value
+}

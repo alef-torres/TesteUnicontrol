@@ -1,0 +1,7 @@
+/**
+ * 
+ */
+
+function validar() {
+    let nome = frmNome.nome.valeu
+}

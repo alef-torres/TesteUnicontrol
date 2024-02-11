@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="estilo/estilo.css">
+    
+</head>
+
+<body>
+    <section class="principal" id="form">
+        <form class="formulario-de-cadastro" action="">
+            <h2>Cadastro-se aqui</h2>
+
+            <label for="username">Nome</label>
+            <div class="input">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" name="username" placeholder="Nome completo">
+            </div>
+
+
+            <label for="profissao">Profissão</label>
+            <div class="input">
+                <i class="fa-solid fa-briefcase"></i>
+                <input type="text" name="profissao" placeholder="Profissão">
+            </div>
+
+
+            <label for="idade">Idade</label>
+            <div class="input">
+                <i class="fa-solid fa-cake-candles"></i>
+                <input type="text" name="idade" placeholder="Idade">
+            </div>
+
+            <div id="btn">
+                <button id="btn-enviar" type="submit">Enviar</button>
+                <button id="btn-pesquisar" type="submit">Pesquisar</button>
+            </div>
+
+        </form>
+    </section>
+
+</body>
+
+</html>

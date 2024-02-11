@@ -1,0 +1,71 @@
+package model;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.util.ArrayList;
+
+import com.mysql.cj.xdevapi.Result;
+
+public class DAO {
+	/** módulo de conexão **/
+
+	private String driver = "com.mysql.jdbc.Driver";
+	private String url = "jdbc:mysql://localhost:3306/dbpessoas?useTimezone=true&serverTimezone=UTC";
+	private String user = "root";
+	private String password = "meubanco";
+
+	private Connection conectar() {
+		Connection con = null;
+
+		try {
+			Class.forName(driver);
+			con = DriverManager.getConnection(url, user, password);
+			return con;
+		} catch (Exception e) {
+			System.out.println(e);
+			return null;
+		}
+	}
+
+	/** CRUD CREATE **/
+
+	public void insertPessoas(JavaBeans pessoa) {
+		String create = "insert into pessoas (nome,profissao,idade) values (?,?,?)";
+
+		try {
+			// abrir a conexao
+			Connection con = conectar();
+			// preparando a query para enviar ao banco de dados
+			PreparedStatement pst = con.prepareStatement(create);
+
+			pst.setString(1, pessoa.getNome());
+			pst.setString(2, pessoa.getProfissao());
+			pst.setString(3, pessoa.getIdade());
+
+			pst.executeUpdate();
+
+			con.close();
+
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+
+	}
+
+	/** CRUD READ **/
+	
+	public ArrayList<JavaBeans> listarPessoas(){
+		String read =  "select * from pessoas order by nome";
+		
+		try {
+			Connection con = conectar();
+			PreparedStatement pst = con.prepareStatement(read);
+			ResultSet rs = pst.executeLargeUpdate();
+		} catch (Exception e) {
+			System.out.println(e);
+			return null;
+		}
+	}
+
+}

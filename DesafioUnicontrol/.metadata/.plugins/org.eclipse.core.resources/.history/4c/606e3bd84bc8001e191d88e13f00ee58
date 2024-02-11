@@ -1,0 +1,46 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Editar</title>
+</head>
+<body>
+
+	<section class="principal" id="form">
+		<form name="frmPessoa" class="formulario-de-cadastro" action="insert">
+			<h2>Cadastre-se aqui</h2>
+
+			<label for="username">Nome</label>
+			<div class="input">
+				<i class="fa-solid fa-user"></i> <input type="text" name="name"
+					placeholder="Nome completo">
+			</div>
+
+
+			<label for="profissao">Profissão</label>
+			<div class="input">
+				<i class="fa-solid fa-briefcase"></i> <input type="text"
+					name="profissao" placeholder="Profissão">
+			</div>
+
+
+			<label for="idade">Idade</label>
+			<div class="input">
+				<i class="fa-solid fa-cake-candles"></i> <input type="text"
+					name="idade" placeholder="Idade">
+			</div>
+
+			<div id="btn">
+				<button id="btn-enviar" type="submit" onclick="validar()">Enviar</button>
+				<button id="btn-pesquisar" type="submit">
+					<a href="main">Todos</a>
+				</button>
+			</div>
+
+		</form>
+	</section>
+
+</body>
+</html>
